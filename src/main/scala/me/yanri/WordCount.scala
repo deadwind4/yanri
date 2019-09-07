@@ -17,7 +17,7 @@ object WordCount {
             .timeWindow(Time.seconds(5), Time.seconds(1))
             .sum("count")
         windowCounts.print().setParallelism(1)
-        env.execute("Socker Word Count")
+        env.execute("Socket Word Count")
     }
 
     case class WordWithCount(word: String, count: Long)
